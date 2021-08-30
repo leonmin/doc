@@ -17,6 +17,7 @@ jobs:
             cd /leonmin
             rm -rf doc
             git clone git@github.com:leonmin/doc.git doc
+            echo $(go version)
             cd doc
             go build main.go
             # pm2 start main --name doc
