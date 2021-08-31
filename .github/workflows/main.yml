@@ -13,4 +13,4 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.KEY_ED25519 }}
-          script: sh deploy_doc.sh
+          script: whoami
