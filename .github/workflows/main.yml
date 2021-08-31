@@ -15,17 +15,8 @@ jobs:
           password: ${{secrets.SSH_PASSWORD}}
           script: |
             echo 1
-            cd /leonmin
+            cd /leonmin/go/src
             echo 2
             rm -rf doc
             echo 3
             git clone git@github.com:leonmin/doc.git doc
-            echo 4
-            echo $(go version)
-            cd doc
-            echo 5
-            go build main.go
-            echo 6
-            # pm2 start main --name doc
-            pm2 restart doc
-            echo 7
