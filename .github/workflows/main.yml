@@ -1,6 +1,6 @@
 name: Deploy doc api by gin
 on:
-  pull_request:
+  push:
     branches: [master]
 
 jobs:
