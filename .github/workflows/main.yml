@@ -10,8 +10,8 @@ jobs:
       - name: Deploy doc api
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.SSH_HOST}}
-          username: ${{secrets.SSH_USERNAME}}
-          key: ${{secrets.KEY_ED25519}}
-          passphrase: ${{secrets.PASSPHRASE}}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.KEY_ED25519 }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: sh deploy_doc.sh
