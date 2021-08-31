@@ -12,7 +12,7 @@ jobs:
         with:
           host: ${{secrets.SSH_HOST}}
           username: ${{secrets.SSH_USERNAME}}
-          password: ${{secrets.SSH_PASSWORD}}
-          script: |
-            echo $PATH
-            echo $(go version)
+          key: ${{secrets.KEY_ED25519}}
+          port: ${{secrets.PORT}}
+          passphrase: ${{secrets.PASSPHRASE}}
+          script: sh deploy_doc.sh
